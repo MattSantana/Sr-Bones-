@@ -23,12 +23,26 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this);
+        Scene scene = SceneManager.GetActiveScene();
+        if(scene.name == Loader.Scene.TitleScreen.ToString())
+        {
+            AudioManager.Instance.PlayAudioClip(AudioManager.MusicClips.MusicIntro);
+        }
+        else if(scene.name == Loader.Scene.InitialCutsceneScreen.ToString())
+        {
+            AudioManager.Instance.PlayAudioClip(AudioManager.MusicClips.MusicIntro);
+        }
+        else if (scene.name == Loader.Scene.SampleScene.ToString())
+        {
+            AudioManager.Instance.PlayAudioClip(AudioManager.MusicClips.MusicFirstStage);
+        }
     }
+
 
 
     public void OnPlayButtonPressed()
     {
-        Loader.Load(Loader.Scene.SampleScene);
+        Loader.Load(Loader.Scene.InitialCutsceneScreen);
     }
 
     public void OnCreditsButtonPressed()
