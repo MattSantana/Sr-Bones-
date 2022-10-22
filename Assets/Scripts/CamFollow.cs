@@ -7,7 +7,7 @@ public class CamFollow : MonoBehaviour
     public Transform target;
     public float smoothing = 2.5f;
     [SerializeField] private float xMax = 0.06f;
-    [SerializeField] private float limiteX= 159.66f;
+    [SerializeField] private float limiteX= 522f;
 
 
     void FixedUpdate()
