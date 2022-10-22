@@ -202,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.05, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -222,9 +222,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f74ec944ddba4e43a463f88d78c6cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 592839979}
+  target: {fileID: 592839979}
   smoothing: 5
   xMax: 0.06
+  limiteX: 159.66
 --- !u!61 &519420034
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -269,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1480202324308350196, guid: dd74273d1a288b240bf6243c9a38837e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.56
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 1480202324308350196, guid: dd74273d1a288b240bf6243c9a38837e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -311,12 +312,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1480202324308350199, guid: dd74273d1a288b240bf6243c9a38837e, type: 3}
-      propertyPath: velPlayer
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1496170792, guid: dd74273d1a288b240bf6243c9a38837e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd74273d1a288b240bf6243c9a38837e, type: 3}
 --- !u!1 &1665465728
 GameObject:

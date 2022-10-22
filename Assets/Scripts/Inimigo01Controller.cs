@@ -9,10 +9,12 @@ public class Inimigo01Controller : InimigoPai
 
     public float distance;
     public  Animator  anim;
-   public static bool  liberaAtk = true;
+    public static bool  liberaAtk = true;
+    private SpriteRenderer sr;
     void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        sr = GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
@@ -25,6 +27,17 @@ public class Inimigo01Controller : InimigoPai
     void Follow()
     {
         transform.position = Vector2.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
+
+        var player = FindObjectOfType<PlayerController>().transform.position;
+
+        if( player.x  >  transform.position.x)
+        {
+            sr.flipX = false;
+        }
+        if( player.x  <  transform.position.x)
+        {
+            sr.flipX = true;
+        }
     }
 
     void Attack()

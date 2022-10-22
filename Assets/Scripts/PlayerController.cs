@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     #region //atributos do player
     private Rigidbody2D myRb;
     [SerializeField] private float velPlayer;
-    [SerializeField] private int life = 10;
+    public static int life = 10;
     [SerializeField] private float stamina = 20f;
     public static bool controlFlip = true;
     #endregion
@@ -150,4 +150,6 @@ public class PlayerController : MonoBehaviour
            Destroy(gameObject);
         }
     }
+
+
 }

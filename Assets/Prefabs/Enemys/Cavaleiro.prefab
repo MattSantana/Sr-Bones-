@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingOrder: 4
   m_Sprite: {fileID: -1479219801, guid: 03c0f508bd3855d4ca112515202c86b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -155,6 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cooldown: 0.35
   life: 3
+  lifeRegen: {fileID: 2008598798496797154, guid: 52d218c76530ce744b7fc7d8fe19e932, type: 3}
+  itemRate: 0.8
   playerPos: {fileID: 0}
   speed: 4
   distance: 0

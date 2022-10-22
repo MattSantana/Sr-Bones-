@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5097396418413681826
+--- !u!1 &2008598798496797154
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,68 +8,71 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5097396418413681828}
-  - component: {fileID: 5097396418413681829}
-  - component: {fileID: 1224128954}
-  m_Layer: 7
-  m_Name: Padre
-  m_TagString: Enemy
+  - component: {fileID: 2008598798496797157}
+  - component: {fileID: 2008598798496797159}
+  - component: {fileID: 2008598798496797156}
+  m_Layer: 0
+  m_Name: Leite
+  m_TagString: LifeRegen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5097396418413681828
+--- !u!4 &2008598798496797157
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097396418413681826}
+  m_GameObject: {fileID: 2008598798496797154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.01, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -1.72, z: 0}
+  m_LocalScale: {x: 0.87515086, y: 0.87515086, z: 0.87515086}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5097396419302372735}
+  - {fileID: 2008598800011588771}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5097396418413681829
+--- !u!114 &2008598798496797159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097396418413681826}
+  m_GameObject: {fileID: 2008598798496797154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6598fb73a73c1af49a9b18a60949b151, type: 3}
+  m_Script: {fileID: 11500000, guid: 11d8f2344d6e64f4ea93c6cc7c1bc0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cooldown: 4
-  life: 6
-  lifeRegen: {fileID: 2008598798496797154, guid: 52d218c76530ce744b7fc7d8fe19e932, type: 3}
-  itemRate: 0.65
-  myShot: {fileID: 9155313229955851605, guid: 869c4ef86c6e9414e970091771aead97, type: 3}
-  velShot: 5
-  qtdShots: 0
---- !u!58 &1224128954
-CircleCollider2D:
+--- !u!61 &2008598798496797156
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097396418413681826}
+  m_GameObject: {fileID: 2008598798496797154}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.005375266, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 1.05
---- !u!1 &5097396419302372732
+  m_Size: {x: 0.62377095, y: 1}
+  m_EdgeRadius: 0
+--- !u!1 &2008598800011588768
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,38 +80,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5097396419302372735}
-  - component: {fileID: 5097396419302372734}
-  - component: {fileID: 350740542}
-  m_Layer: 7
-  m_Name: PadreSprite
+  - component: {fileID: 2008598800011588771}
+  - component: {fileID: 2008598800011588773}
+  - component: {fileID: 8250238201359606710}
+  m_Layer: 0
+  m_Name: LeiteSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5097396419302372735
+--- !u!4 &2008598800011588771
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097396419302372732}
+  m_GameObject: {fileID: 2008598800011588768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5.691327, y: 5.691327, z: 5.691327}
+  m_LocalScale: {x: 2.1579, y: 2.1579, z: 2.1579}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5097396418413681828}
+  m_Father: {fileID: 2008598798496797157}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5097396419302372734
+--- !u!212 &2008598800011588773
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097396419302372732}
+  m_GameObject: {fileID: 2008598800011588768}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -143,7 +146,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: -1709910497, guid: aab83f8caf6c4414c84bf5adc0c1867a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b79abaf765a00e4cac1255bf57b9bc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -154,17 +157,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &350740542
+--- !u!95 &8250238201359606710
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097396419302372732}
+  m_GameObject: {fileID: 2008598800011588768}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fc097cc6fa4948f4fb4add312436aa5f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 217db2db5425ecf45a3cb57fdc73b151, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

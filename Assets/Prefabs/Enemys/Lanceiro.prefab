@@ -70,6 +70,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cooldown: 0
   life: 5
+  lifeRegen: {fileID: 2008598798496797154, guid: 52d218c76530ce744b7fc7d8fe19e932, type: 3}
+  itemRate: 0.7
   playerPos: {fileID: 0}
   speed: 4
   rushSpeed: 9

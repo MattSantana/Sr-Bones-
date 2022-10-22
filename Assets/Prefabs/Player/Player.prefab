@@ -189,7 +189,7 @@ MonoBehaviour:
   fireBall: {fileID: 2857632976845949740, guid: 908c82b3fdf7a5f46a287aa7c9cb60b2, type: 3}
   firePoint: {fileID: 1480202322881172369}
   velShot: 10
-  velPlayer: 5
+  velPlayer: 4
   life: 30
   stamina: 20
   yMin: -3.6
