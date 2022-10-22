@@ -11,8 +11,10 @@ public static class Loader
     public enum Scene
     {
         TitleScreen,
+        InitialCutsceneScreen,
+        SampleScene,
         LoadingScreen,
-        SampleScene
+        FinalCutsceneScreen
     }
 
     private static Action onLoaderCallback;
