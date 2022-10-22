@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5097396418413681828}
   - component: {fileID: 5097396418413681829}
   - component: {fileID: 1224128954}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Padre
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -31,7 +31,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5097396419302372735}
-  - {fileID: 5097396418731297733}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,10 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6598fb73a73c1af49a9b18a60949b151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cooldown: 300
-  life: 1
-  myShot: {fileID: 244037453201623538, guid: 75f5dfd68c6383243a8c04c52bbe67b0, type: 3}
-  shotPoint: {fileID: 5097396418731297733}
+  Cooldown: 2
+  life: 10
+  myShot: {fileID: 9155313229955851605, guid: 869c4ef86c6e9414e970091771aead97, type: 3}
   velShot: 5
   qtdShots: 0
 --- !u!58 &1224128954
@@ -68,38 +66,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
---- !u!1 &5097396418731297730
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5097396418731297733}
-  m_Layer: 0
-  m_Name: ShotPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5097396418731297733
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097396418731297730}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5097396418413681828}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Radius: 1.05
 --- !u!1 &5097396419302372732
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,8 +77,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5097396419302372735}
   - component: {fileID: 5097396419302372734}
-  m_Layer: 0
-  m_Name: Circle
+  - component: {fileID: 350740542}
+  m_Layer: 7
+  m_Name: PadreSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +94,7 @@ Transform:
   m_GameObject: {fileID: 5097396419302372732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5.691327, y: 5.691327, z: 5.691327}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5097396418413681828}
@@ -173,7 +141,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -1709910497, guid: aab83f8caf6c4414c84bf5adc0c1867a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,3 +152,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &350740542
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5097396419302372732}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fc097cc6fa4948f4fb4add312436aa5f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

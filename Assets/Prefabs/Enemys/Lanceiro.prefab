@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8596848392288009747}
   - component: {fileID: 8596848392288009746}
   - component: {fileID: 8596848392288009744}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lanceiro
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,9 +68,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b772761dd9eb642a0023153da5967c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Cooldown: 0
+  life: 1
   playerPos: {fileID: 0}
   speed: 4
-  rushSpeed: 6
+  rushSpeed: 9
   sec: 2
   smoothSpeed: 0.125
   follow: 0
@@ -88,7 +90,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.09138131, y: -0.53583086}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -99,7 +101,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.0909877, y: 1.554754}
   m_EdgeRadius: 0
 --- !u!1 &8596848393186896361
 GameObject:
@@ -111,8 +113,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8596848393186896366}
   - component: {fileID: 8596848393186896365}
-  m_Layer: 0
-  m_Name: Square
+  - component: {fileID: 6463074182270164530}
+  m_Layer: 7
+  m_Name: SpriteLanceiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 8596848393186896361}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 7.3021, y: 7.3021, z: 7.3021}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8596848392288009757}
@@ -173,10 +176,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 719803805, guid: 952807fe65f1e7d4b88ea23558f7202b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -185,3 +188,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6463074182270164530
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596848393186896361}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 94f0bdd085386db48a16363ac7233ed1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -23,12 +23,15 @@ public class PlayerController : MonoBehaviour
     #endregion
     #region // limites do player
     private float xMax = 8.24f;
-    [SerializeField] private float yMin = -3.92f;
-    [SerializeField] private float yMax = -1.08f;
+    [SerializeField] private float yMin = -3.6f;
+    [SerializeField] private float yMax = 0.05f;
     #endregion
     public float sec;
     [SerializeField] private GameObject atk;
     [SerializeField] private Transform pointAtk;
+
+    //controlar o dano do atk do bones.
+    public static bool  liberaAtk = true;
     void Start()
     {
         myRb = GetComponent<Rigidbody2D>();
@@ -82,24 +85,34 @@ public class PlayerController : MonoBehaviour
     }
     void Move()
     {
-        var h = Input.GetAxis("Horizontal");
-        var v = Input.GetAxis("Vertical");
+        var h = Input.GetAxisRaw("Horizontal");
+        var v = Input.GetAxisRaw("Vertical");
 
         Vector2 myVelocity = new Vector2( h , v );
 
         myVelocity.Normalize();
         myRb.velocity = myVelocity * velPlayer;
 
-        float meuX = Mathf.Clamp( transform.position.x, - xMax, xMax );
+        //float meuX = Mathf.Clamp( transform.position.x, - xMax, xMax );
         float meuY = Mathf.Clamp( transform.position.y, yMin, yMax );
 
 
-        transform.position = new Vector3(meuX, meuY, transform.position.z);
+        transform.position = new Vector3(transform.position.x, meuY, transform.position.z);
 
         if( Input.GetButton("Horizontal") || Input.GetButton("Vertical") )
         {
             stamina -=Time.deltaTime;
         }
+
+        if (h > 0)
+        {
+            transform.localScale = new Vector3( 1, 1, 1);
+            
+        }
+        else if (h < 0)
+        {
+            transform.localScale = new Vector3( -1, 1, 1);
+        } 
     }
 
     void HorseShot()
@@ -116,6 +129,7 @@ public class PlayerController : MonoBehaviour
         if ( souCavalo == false && Input.GetButtonDown("Fire1") )
         {
             anim.SetTrigger( "Attack");
+            liberaAtk = true;
         }
     }
     public void TakeDamage(int damage)

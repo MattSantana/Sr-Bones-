@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inimigo02Controller : MonoBehaviour
+public class Inimigo02Controller : InimigoPai
 {
     public Transform playerPos;
 

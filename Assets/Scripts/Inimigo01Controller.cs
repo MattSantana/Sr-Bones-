@@ -2,20 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inimigo01Controller : MonoBehaviour
+public class Inimigo01Controller : InimigoPai
 {
     public Transform playerPos;
     public float speed;
 
     public float distance;
-
-    // Você vai colocar aqui o ataque e tirar essas outras variáveis.
-    public GameObject spt1;
-    public GameObject spt2;
-
+    public  Animator  anim;
+   public static bool  liberaAtk = true;
     void Start()
     {
-        
+        playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     void Update()
@@ -32,17 +29,21 @@ public class Inimigo01Controller : MonoBehaviour
 
     void Attack()
     {
-        if (distance <= 2)
+        if (distance <= 2f)
         {
-            spt1.SetActive(false);
-            spt2.SetActive(true);
+            Cooldown -= Time.deltaTime;
+            if( Cooldown <= 0)
+            {
+                anim.SetTrigger("CavaleiroAtk");
+                liberaAtk = true;
+                Cooldown = 2f;
+            }
+
         }
 
-        if (distance >= 2)
+        if (distance >= 2f)
         {
             Follow();
-            spt1.SetActive(true);
-            spt2.SetActive(false);
         }
     }
 }

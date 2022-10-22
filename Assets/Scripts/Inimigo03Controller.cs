@@ -5,7 +5,6 @@ using UnityEngine;
 public class Inimigo03Controller : InimigoPai
 {
     [SerializeField] private GameObject myShot;
-    [SerializeField] private Transform shotPoint;
     [SerializeField] private float velShot;
     [SerializeField] private int qtdShots = 0;
     void Start()
@@ -27,11 +26,11 @@ public class Inimigo03Controller : InimigoPai
 
          if( visible == true && Cooldown <=0 )
         {
-            var position = new Vector2( Random.Range( -7.59f, -1.54f ), Random.Range( -3.7f, - 1.3f ) );
+            var position = new Vector2( Random.Range( player.transform.position.x -2.8f , player.transform.position.x + 2.8f ), Random.Range( -1f, 1f ) );
             
             Instantiate( myShot, position, Quaternion.identity);
 
-            Cooldown = 4;
+            Cooldown = 1.5f;
         }
     }
     
