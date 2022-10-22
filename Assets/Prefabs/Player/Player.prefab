@@ -190,7 +190,6 @@ MonoBehaviour:
   firePoint: {fileID: 1480202322881172369}
   velShot: 10
   velPlayer: 4
-  life: 30
   stamina: 20
   yMin: -3.6
   yMax: 0.05
@@ -231,8 +230,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.043481827, y: -0.22254202}
-  m_Size: {x: 1.1888609, y: 2.2027164}
+  m_Offset: {x: -0.030960083, y: -0.17248803}
+  m_Size: {x: 0.7133484, y: 1.226663}
   m_Direction: 0
 --- !u!114 &592839975
 MonoBehaviour:
