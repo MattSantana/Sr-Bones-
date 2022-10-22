@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cooldown: 0
-  life: 1
+  life: 5
   playerPos: {fileID: 0}
   speed: 4
   rushSpeed: 9

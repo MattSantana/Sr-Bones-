@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cooldown: 0.35
-  life: 10
+  life: 3
   playerPos: {fileID: 0}
   speed: 4
   distance: 0

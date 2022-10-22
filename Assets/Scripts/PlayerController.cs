@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float velPlayer;
     [SerializeField] private int life = 10;
     [SerializeField] private float stamina = 20f;
+    public static bool controlFlip = true;
     #endregion
     #region // limites do player
     private float xMax = 8.24f;
@@ -107,11 +108,12 @@ public class PlayerController : MonoBehaviour
         if (h > 0)
         {
             transform.localScale = new Vector3( 1, 1, 1);
-            
+            controlFlip = true;
         }
         else if (h < 0)
         {
             transform.localScale = new Vector3( -1, 1, 1);
+            controlFlip = false;
         } 
     }
 
@@ -121,7 +123,15 @@ public class PlayerController : MonoBehaviour
         {
             //atireeei
             var fire = Instantiate( fireBall, firePoint.position, Quaternion.identity );
-            fire.GetComponent<Rigidbody2D>().velocity = new Vector2( velShot, 0f);
+
+            if( controlFlip )
+            {
+                fire.GetComponent<Rigidbody2D>().velocity = new Vector2(  velShot, 0f);
+            }
+            else
+            {
+                fire.GetComponent<Rigidbody2D>().velocity = new Vector2( - velShot, 0f);
+            }
         }
     }
     public void BonesAttack()

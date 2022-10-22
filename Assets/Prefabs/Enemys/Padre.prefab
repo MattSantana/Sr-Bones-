@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6598fb73a73c1af49a9b18a60949b151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cooldown: 2
-  life: 10
+  Cooldown: 4
+  life: 6
   myShot: {fileID: 9155313229955851605, guid: 869c4ef86c6e9414e970091771aead97, type: 3}
   velShot: 5
   qtdShots: 0

@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class ShotController : MonoBehaviour
 {
+    private SpriteRenderer sr;
+    void Start() 
+    {
+        sr = GetComponentInChildren<SpriteRenderer>();
+
+        if( PlayerController.controlFlip == false)
+        {
+            sr.flipX = true;
+        }
+    }
+    void Update() 
+    {
+
+    }
     private void OnTriggerEnter2D(Collider2D other) 
    {
         if( other.CompareTag("Enemy"))
