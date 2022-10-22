@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InitialCutsceneHandler : MonoBehaviour
@@ -11,12 +12,14 @@ public class InitialCutsceneHandler : MonoBehaviour
     public Button nextButton;
 
     private int sceneIndex;
+    private Scene currentScene;
 
     private void Start()
     {
         sceneIndex = 0;
         cutsceneImage.sprite = cutsceneSprites[0];
         sceneIndex++;
+        currentScene = SceneManager.GetActiveScene(); 
     }
 
     public void OnNextButtonPressed()
@@ -26,7 +29,7 @@ public class InitialCutsceneHandler : MonoBehaviour
             StartCoroutine(NextImage());
             nextButton.gameObject.SetActive(false);
         }
-        else
+        else if (currentScene.name == Loader.Scene.InitialCutsceneScreen.ToString())
         {
             Loader.Load(Loader.Scene.SampleScene);
         }
