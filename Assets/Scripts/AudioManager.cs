@@ -35,4 +35,6 @@ public class AudioManager : MonoBehaviour
         audioSource.clip = gameMusics[(int)music];
         audioSource.Play();
     }
+
+
 }
