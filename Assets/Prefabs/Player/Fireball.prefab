@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2066491048504084192}
   - component: {fileID: 1932952500}
   m_Layer: 6
-  m_Name: Circle
+  m_Name: Cuspe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2220250564734735358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.8858156, y: 7.8858156, z: 7.8858156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4718547179798708069}
@@ -186,6 +186,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.054591417, y: -0.007798791}
+  m_Offset: {x: 0.019380927, y: -0.022469863}
   serializedVersion: 2
-  m_Radius: 0.31282973
+  m_Radius: 0.15144789
