@@ -26,11 +26,11 @@ public class Inimigo03Controller : InimigoPai
 
          if( visible == true && Cooldown <=0 )
         {
-            var position = new Vector2( Random.Range( player.transform.position.x -2.8f , player.transform.position.x + 2.8f ), Random.Range( -1f, 1f ) );
+            var position = new Vector2( Random.Range( player.transform.position.x -0.8f , player.transform.position.x + 0.8f ), Random.Range( -0.3f, 0.3f ) );
             
             Instantiate( myShot, position, Quaternion.identity);
 
-            Cooldown = 1.5f;
+            Cooldown = 3f;
         }
     }
     

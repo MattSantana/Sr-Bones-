@@ -156,7 +156,7 @@ MonoBehaviour:
   Cooldown: 0.35
   life: 3
   lifeRegen: {fileID: 2008598798496797154, guid: 52d218c76530ce744b7fc7d8fe19e932, type: 3}
-  itemRate: 0.8
+  itemRate: 0.9
   playerPos: {fileID: 0}
   speed: 4
   distance: 0

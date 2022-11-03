@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6598fb73a73c1af49a9b18a60949b151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cooldown: 4
+  Cooldown: 3
   life: 6
   lifeRegen: {fileID: 2008598798496797154, guid: 52d218c76530ce744b7fc7d8fe19e932, type: 3}
   itemRate: 0.65
@@ -63,7 +63,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.053843454, y: -0.05384344}
