@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -28,6 +29,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float yMin = -3.6f;
     [SerializeField] private float yMax = 0.05f;
     #endregion
+    #region // variaveis para mudar sprite da UI
+    [SerializeField] private Image caveiraSr;
+    [SerializeField] private Sprite caveira; 
+    [SerializeField] private Sprite cavalo; 
+    [SerializeField] private Image caveiraVida;
+    [SerializeField] private Sprite bonesVida; 
+    [SerializeField] private Sprite cavaloVida; 
+    #endregion
     public float sec;
     [SerializeField] private GameObject atk;
     [SerializeField] private Transform pointAtk;
@@ -38,6 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         myRb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
+
     }
 
     void Update()
@@ -74,16 +84,21 @@ public class PlayerController : MonoBehaviour
         HorseShot();
         BonesAttack();
         Move();
+        LifeBar();
     }
     void Forma1()
     {
         souCavalo = false;
         anim.SetBool( "Ranged", false);
+        caveiraSr.sprite = caveira;
+        caveiraVida.sprite = bonesVida;
     }
     void Forma2()
     {
         souCavalo = true;
         anim.SetBool( "Ranged", true );
+        caveiraSr.sprite = cavalo;
+        caveiraVida.sprite = cavaloVida;
     }
     void Move()
     {
@@ -149,8 +164,23 @@ public class PlayerController : MonoBehaviour
         if( life <= 0 )
         {
            SceneManager.LoadScene(2);
+           life = 10;
+           EnemySpawner.level = 1;
         }
     }
 
+    public void LifeBar()
+    {
+        if( life > 0 )
+        {
+          caveiraVida.fillAmount = (float)life / 10;
+        }
+
+        if( life >= 10)
+        {
+            life = 10;
+            Debug.Log("Minha vida atual é:" + life);
+        }
+    }
 
 }

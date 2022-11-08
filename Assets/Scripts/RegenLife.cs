@@ -15,6 +15,6 @@ public class RegenLife : MonoBehaviour
             PlayerController.life += 5;
             Destroy(gameObject);
         }
-        Debug.Log(PlayerController.life);
+        //Debug.Log(PlayerController.life);
     }
 }

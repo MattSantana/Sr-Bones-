@@ -193,6 +193,12 @@ MonoBehaviour:
   stamina: 20
   yMin: -3.6
   yMax: 0.05
+  caveiraSr: {fileID: 0}
+  caveira: {fileID: 21300000, guid: b06a7f11aacc9d041a27e6cd78758809, type: 3}
+  cavalo: {fileID: 21300000, guid: 058e0dc58feceb946bbee1297e243c54, type: 3}
+  caveiraVida: {fileID: 0}
+  bonesVida: {fileID: 21300000, guid: bfb0ecde99cc3d74994f6cb75918c60d, type: 3}
+  cavaloVida: {fileID: 21300000, guid: f314e9116ca1caa47b245aaf83628ae4, type: 3}
   sec: 0
   atk: {fileID: 0}
   pointAtk: {fileID: 0}
@@ -245,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ee105e9f55e8f4a8580f0694ae9e40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 2.02
+  range: 1
   Enemy:
     serializedVersion: 2
     m_Bits: 128

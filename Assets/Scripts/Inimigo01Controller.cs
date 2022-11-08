@@ -42,7 +42,7 @@ public class Inimigo01Controller : InimigoPai
 
     void Attack()
     {
-        if (distance <= 2f)
+        if (distance <= 1.5f)
         {
             Cooldown -= Time.deltaTime;
             if( Cooldown <= 0)
@@ -54,7 +54,7 @@ public class Inimigo01Controller : InimigoPai
 
         }
 
-        if (distance >= 2f)
+        if (distance >= 1.5f)
         {
             Follow();
         }
